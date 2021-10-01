@@ -10,6 +10,11 @@
 		237C50C927071DB20095B5E1 /* kanaCommerceCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237C50BF27071DB20095B5E1 /* kanaCommerceCore.framework */; };
 		237C50CE27071DB20095B5E1 /* kanaCommerceCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50CD27071DB20095B5E1 /* kanaCommerceCoreTests.swift */; };
 		237C50D027071DB20095B5E1 /* kanaCommerceCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 237C50C227071DB20095B5E1 /* kanaCommerceCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		237C50DC27071E490095B5E1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50DB27071E490095B5E1 /* File.swift */; };
+		237C50E027071E810095B5E1 /* RemoveItemCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50DF27071E810095B5E1 /* RemoveItemCartUseCase.swift */; };
+		237C50E227071EB20095B5E1 /* AddItemCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E127071EB20095B5E1 /* AddItemCartUseCase.swift */; };
+		237C50E427071EC10095B5E1 /* ClearCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E327071EC10095B5E1 /* ClearCartUseCase.swift */; };
+		237C50E627071ECF0095B5E1 /* CalculatePriceCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		237C50C827071DB20095B5E1 /* kanaCommerceCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kanaCommerceCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		237C50CD27071DB20095B5E1 /* kanaCommerceCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanaCommerceCoreTests.swift; sourceTree = "<group>"; };
 		237C50CF27071DB20095B5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		237C50DB27071E490095B5E1 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		237C50DF27071E810095B5E1 /* RemoveItemCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveItemCartUseCase.swift; sourceTree = "<group>"; };
+		237C50E127071EB20095B5E1 /* AddItemCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemCartUseCase.swift; sourceTree = "<group>"; };
+		237C50E327071EC10095B5E1 /* ClearCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCartUseCase.swift; sourceTree = "<group>"; };
+		237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePriceCartUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +81,9 @@
 		237C50C127071DB20095B5E1 /* kanaCommerceCore */ = {
 			isa = PBXGroup;
 			children = (
+				237C50D927071E260095B5E1 /* Model */,
 				237C50C227071DB20095B5E1 /* kanaCommerceCore.h */,
+				237C50DA27071E2F0095B5E1 /* UseCase */,
 				237C50C327071DB20095B5E1 /* Info.plist */,
 			);
 			path = kanaCommerceCore;
@@ -84,6 +96,25 @@
 				237C50CF27071DB20095B5E1 /* Info.plist */,
 			);
 			path = kanaCommerceCoreTests;
+			sourceTree = "<group>";
+		};
+		237C50D927071E260095B5E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				237C50DB27071E490095B5E1 /* File.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		237C50DA27071E2F0095B5E1 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				237C50DF27071E810095B5E1 /* RemoveItemCartUseCase.swift */,
+				237C50E127071EB20095B5E1 /* AddItemCartUseCase.swift */,
+				237C50E327071EC10095B5E1 /* ClearCartUseCase.swift */,
+				237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +178,7 @@
 				TargetAttributes = {
 					237C50BE27071DB20095B5E1 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					237C50C727071DB20095B5E1 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -194,6 +226,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237C50E027071E810095B5E1 /* RemoveItemCartUseCase.swift in Sources */,
+				237C50E627071ECF0095B5E1 /* CalculatePriceCartUseCase.swift in Sources */,
+				237C50DC27071E490095B5E1 /* File.swift in Sources */,
+				237C50E227071EB20095B5E1 /* AddItemCartUseCase.swift in Sources */,
+				237C50E427071EC10095B5E1 /* ClearCartUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +378,7 @@
 		237C50D427071DB20095B5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = PedroJSMK.kanaCommerceCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +403,7 @@
 		237C50D527071DB20095B5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +427,7 @@
 		237C50D727071DB20095B5E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = kanaCommerceCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +445,7 @@
 		237C50D827071DB20095B5E1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = kanaCommerceCoreTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
