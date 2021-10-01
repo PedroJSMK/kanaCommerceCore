@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		237C50C927071DB20095B5E1 /* kanaCommerceCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237C50BF27071DB20095B5E1 /* kanaCommerceCore.framework */; };
 		237C50CE27071DB20095B5E1 /* kanaCommerceCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50CD27071DB20095B5E1 /* kanaCommerceCoreTests.swift */; };
-		237C50D027071DB20095B5E1 /* kanaCommerceCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 237C50C227071DB20095B5E1 /* kanaCommerceCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		237C50DC27071E490095B5E1 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50DB27071E490095B5E1 /* File.swift */; };
+		237C50DC27071E490095B5E1 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50DB27071E490095B5E1 /* Cart.swift */; };
 		237C50E027071E810095B5E1 /* RemoveItemCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50DF27071E810095B5E1 /* RemoveItemCartUseCase.swift */; };
 		237C50E227071EB20095B5E1 /* AddItemCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E127071EB20095B5E1 /* AddItemCartUseCase.swift */; };
 		237C50E427071EC10095B5E1 /* ClearCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E327071EC10095B5E1 /* ClearCartUseCase.swift */; };
 		237C50E627071ECF0095B5E1 /* CalculatePriceCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */; };
+		237C50E827071F2E0095B5E1 /* kanaCommerceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E727071F2E0095B5E1 /* kanaCommerceCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,16 +29,16 @@
 
 /* Begin PBXFileReference section */
 		237C50BF27071DB20095B5E1 /* kanaCommerceCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = kanaCommerceCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		237C50C227071DB20095B5E1 /* kanaCommerceCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kanaCommerceCore.h; sourceTree = "<group>"; };
 		237C50C327071DB20095B5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		237C50C827071DB20095B5E1 /* kanaCommerceCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kanaCommerceCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		237C50CD27071DB20095B5E1 /* kanaCommerceCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanaCommerceCoreTests.swift; sourceTree = "<group>"; };
 		237C50CF27071DB20095B5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		237C50DB27071E490095B5E1 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		237C50DB27071E490095B5E1 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		237C50DF27071E810095B5E1 /* RemoveItemCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveItemCartUseCase.swift; sourceTree = "<group>"; };
 		237C50E127071EB20095B5E1 /* AddItemCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemCartUseCase.swift; sourceTree = "<group>"; };
 		237C50E327071EC10095B5E1 /* ClearCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCartUseCase.swift; sourceTree = "<group>"; };
 		237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePriceCartUseCase.swift; sourceTree = "<group>"; };
+		237C50E727071F2E0095B5E1 /* kanaCommerceCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanaCommerceCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				237C50D927071E260095B5E1 /* Model */,
-				237C50C227071DB20095B5E1 /* kanaCommerceCore.h */,
 				237C50DA27071E2F0095B5E1 /* UseCase */,
 				237C50C327071DB20095B5E1 /* Info.plist */,
+				237C50E727071F2E0095B5E1 /* kanaCommerceCore.swift */,
 			);
 			path = kanaCommerceCore;
 			sourceTree = "<group>";
@@ -101,7 +101,7 @@
 		237C50D927071E260095B5E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				237C50DB27071E490095B5E1 /* File.swift */,
+				237C50DB27071E490095B5E1 /* Cart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,7 +124,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				237C50D027071DB20095B5E1 /* kanaCommerceCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +227,8 @@
 			files = (
 				237C50E027071E810095B5E1 /* RemoveItemCartUseCase.swift in Sources */,
 				237C50E627071ECF0095B5E1 /* CalculatePriceCartUseCase.swift in Sources */,
-				237C50DC27071E490095B5E1 /* File.swift in Sources */,
+				237C50E827071F2E0095B5E1 /* kanaCommerceCore.swift in Sources */,
+				237C50DC27071E490095B5E1 /* Cart.swift in Sources */,
 				237C50E227071EB20095B5E1 /* AddItemCartUseCase.swift in Sources */,
 				237C50E427071EC10095B5E1 /* ClearCartUseCase.swift in Sources */,
 			);
