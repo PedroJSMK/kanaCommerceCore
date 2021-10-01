@@ -16,6 +16,11 @@
 		237C50E627071ECF0095B5E1 /* CalculatePriceCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */; };
 		237C50E827071F2E0095B5E1 /* kanaCommerceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E727071F2E0095B5E1 /* kanaCommerceCore.swift */; };
 		237C50EB270721F10095B5E1 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50EA270721F10095B5E1 /* CartItem.swift */; };
+		237C50ED270722580095B5E1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50EC270722580095B5E1 /* Item.swift */; };
+		237C50F0270722AF0095B5E1 /* CalculatePriceCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50EF270722AF0095B5E1 /* CalculatePriceCartUseCaseTests.swift */; };
+		237C50F2270722C60095B5E1 /* ClearCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50F1270722C60095B5E1 /* ClearCartUseCaseTests.swift */; };
+		237C50F4270722D40095B5E1 /* RemoveItemCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50F3270722D40095B5E1 /* RemoveItemCartUseCaseTests.swift */; };
+		237C50F6270722E00095B5E1 /* AddItemCartUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50F5270722E00095B5E1 /* AddItemCartUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,11 @@
 		237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePriceCartUseCase.swift; sourceTree = "<group>"; };
 		237C50E727071F2E0095B5E1 /* kanaCommerceCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanaCommerceCore.swift; sourceTree = "<group>"; };
 		237C50EA270721F10095B5E1 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		237C50EC270722580095B5E1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		237C50EF270722AF0095B5E1 /* CalculatePriceCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePriceCartUseCaseTests.swift; sourceTree = "<group>"; };
+		237C50F1270722C60095B5E1 /* ClearCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCartUseCaseTests.swift; sourceTree = "<group>"; };
+		237C50F3270722D40095B5E1 /* RemoveItemCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveItemCartUseCaseTests.swift; sourceTree = "<group>"; };
+		237C50F5270722E00095B5E1 /* AddItemCartUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemCartUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +104,9 @@
 		237C50CC27071DB20095B5E1 /* kanaCommerceCoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				237C50E9270721DE0095B5E1 /* Helpers */,
 				237C50CD27071DB20095B5E1 /* kanaCommerceCoreTests.swift */,
+				237C50E9270721DE0095B5E1 /* Helpers */,
+				237C50EE270722920095B5E1 /* UseCase */,
 				237C50CF27071DB20095B5E1 /* Info.plist */,
 			);
 			path = kanaCommerceCoreTests;
@@ -124,8 +135,20 @@
 			isa = PBXGroup;
 			children = (
 				237C50EA270721F10095B5E1 /* CartItem.swift */,
+				237C50EC270722580095B5E1 /* Item.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		237C50EE270722920095B5E1 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				237C50EF270722AF0095B5E1 /* CalculatePriceCartUseCaseTests.swift */,
+				237C50F1270722C60095B5E1 /* ClearCartUseCaseTests.swift */,
+				237C50F3270722D40095B5E1 /* RemoveItemCartUseCaseTests.swift */,
+				237C50F5270722E00095B5E1 /* AddItemCartUseCaseTests.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +273,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				237C50EB270721F10095B5E1 /* CartItem.swift in Sources */,
+				237C50F6270722E00095B5E1 /* AddItemCartUseCaseTests.swift in Sources */,
+				237C50F2270722C60095B5E1 /* ClearCartUseCaseTests.swift in Sources */,
+				237C50F4270722D40095B5E1 /* RemoveItemCartUseCaseTests.swift in Sources */,
+				237C50ED270722580095B5E1 /* Item.swift in Sources */,
+				237C50F0270722AF0095B5E1 /* CalculatePriceCartUseCaseTests.swift in Sources */,
 				237C50CE27071DB20095B5E1 /* kanaCommerceCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
