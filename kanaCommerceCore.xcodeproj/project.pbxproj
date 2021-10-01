@@ -15,6 +15,7 @@
 		237C50E427071EC10095B5E1 /* ClearCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E327071EC10095B5E1 /* ClearCartUseCase.swift */; };
 		237C50E627071ECF0095B5E1 /* CalculatePriceCartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */; };
 		237C50E827071F2E0095B5E1 /* kanaCommerceCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50E727071F2E0095B5E1 /* kanaCommerceCore.swift */; };
+		237C50EB270721F10095B5E1 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237C50EA270721F10095B5E1 /* CartItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		237C50E327071EC10095B5E1 /* ClearCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearCartUseCase.swift; sourceTree = "<group>"; };
 		237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePriceCartUseCase.swift; sourceTree = "<group>"; };
 		237C50E727071F2E0095B5E1 /* kanaCommerceCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kanaCommerceCore.swift; sourceTree = "<group>"; };
+		237C50EA270721F10095B5E1 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		237C50CC27071DB20095B5E1 /* kanaCommerceCoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				237C50E9270721DE0095B5E1 /* Helpers */,
 				237C50CD27071DB20095B5E1 /* kanaCommerceCoreTests.swift */,
 				237C50CF27071DB20095B5E1 /* Info.plist */,
 			);
@@ -115,6 +118,14 @@
 				237C50E527071ECF0095B5E1 /* CalculatePriceCartUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		237C50E9270721DE0095B5E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				237C50EA270721F10095B5E1 /* CartItem.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				237C50EB270721F10095B5E1 /* CartItem.swift in Sources */,
 				237C50CE27071DB20095B5E1 /* kanaCommerceCoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

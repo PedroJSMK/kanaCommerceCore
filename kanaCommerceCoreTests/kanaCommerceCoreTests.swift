@@ -6,28 +6,79 @@
 //
 
 import XCTest
-@testable import kanaCommerceCore
+import kanaCommerceCore
 
-class kanaCommerceCoreTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+class kanaCommerceCore: XCTestCase {
+    
+    let item = CartItem(item: Item(id: 4, name: "Item 1", price: 10))
+    
+    func testkanaCommerceCore_start_ShouldReturnAValidkanaCommerceCore() {
+        //Arrange
+        let sut = kanaCommerceCore.startWith(items: [CartItem]())
+        
+        //Assert
+        XCTAssertNotNil(sut)
+        
+        func testkanaCommerceCore_startWithItems_ShouldReturntestkanaCommerceCoreWithCartPopulatedWithItems() {
+            //Arrange
+            let sut = kanaCommerceCore.startWith(items: [item])
+            
+            //Assert
+            XCTAssertEqual(sut.currentCart.items.count, 1)
+            XCTAssertEqual(sut.currentCart.items, [item])
+        }
+        
+        func testkanaCommerceCore_addItem_ShouldReturnCartWithItem() {
+            //Arrange
+            let sut = kanaCommerceCore.startWith(items: [CartItem]())
+            
+            //Act
+            let cart = sut.add(item: item)
+            
+            //Assert
+            XCTAssertEqual(cart.items.count, 1)
+            XCTAssertEqual(cart.items, [item])
+            XCTAssertEqual(sut.currentCart.items.count, 1)
+            XCTAssertEqual(sut.currentCart.items, [item])
+        }
+        
+        func testkanaCommerceCore_removeItem_ShouldReturnCartWithoutItems() {
+            //Arrange
+            let sut = kanaCommerceCore.startWith(items: [item])
+            
+            //Act
+            let cart = sut.remove(item: item)
+            
+            //Assert
+            XCTAssertEqual(cart.items.count, 0)
+            XCTAssertEqual(cart.items, [])
+            XCTAssertEqual(sut.currentCart.items.count, 0)
+            XCTAssertEqual(sut.currentCart.items, [])
+        }
+        
+        func testkanaCommerceCore_clear_ShouldReturnCartWithoutItems() {
+            //Arrange
+            let sut = kanaCommerceCore.startWith(items: [item])
+            
+            //Act
+            let cart = sut.clear()
+            
+            //Assert
+            XCTAssertEqual(cart.items.count, 0)
+            XCTAssertEqual(cart.items, [])
+            XCTAssertEqual(sut.currentCart.items.count, 0)
+            XCTAssertEqual(sut.currentCart.items, [])
+        }
+        
+        func testkanaCommerceCore_calculateTotalPrice_ShouldReturnCartTotalPrice() {
+            //Arrange
+            let sut = kanaCommerceCore.startWith(items: [item])
+            
+            //Act
+            let price = sut.calculateTotalPrice()
+            
+            //Assert
+            XCTAssertEqual(price, 10)
         }
     }
 
-}
