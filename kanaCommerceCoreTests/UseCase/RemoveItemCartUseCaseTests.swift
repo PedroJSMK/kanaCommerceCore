@@ -6,27 +6,41 @@
 //
 
 import XCTest
+@testable import kanaCommerceCore
 
-class RemoveItemCartUseCaseTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+func testRemoveItemUseCase_removeOneItem_ShouldReceiveCartWithOneItem() {
+    
+    let sut = RemoveItemCartUseCase<CartItem>()
+    
+    let cart = sut.execute(CartItem.item1, toCart: Cart(items: [CartItem.item1, CartItem.item2]))
+    
+    XCTAssertEqual(cart.items.count, 1)
+    XCTAssertEqual(cart.items.first, CartItem.item2)
+    XCTAssertEqual(cart.items.last, CartItem.item2)
 }
+
+func testRemoveItemUseCase_removeOneItemWithQuantityTwo_ShouldReceiveCartWithTwoItems() {
+    
+    let sut = RemoveItemCartUseCase<CartItem>()
+    let item = CartItem(item: Item(id: 4, name: "Item", price: 10))
+    item.setQuantity(2)
+    
+    let cart = sut.execute(item, toCart: Cart(items: [item, CartItem.item2]))
+    
+    XCTAssertEqual(cart.items.count, 2)
+    XCTAssertEqual(cart.items.first, item)
+    XCTAssertEqual(cart.items.last, CartItem.item2)
+}
+
+func testRemoveItemUseCase_removeOneItemThatIsNotOnTheCart_ShouldReceiveCartWithTheSameItems() {
+    
+    let sut = RemoveItemCartUseCase<CartItem>()
+    
+    let cart = sut.execute(CartItem.item3, toCart: Cart(items: [CartItem.item1, CartItem.item2]))
+    
+    XCTAssertEqual(cart.items.count, 2)
+    XCTAssertEqual(cart.items.first, CartItem.item1)
+    XCTAssertEqual(cart.items.last, CartItem.item2)
+}
+
+

@@ -6,27 +6,38 @@
 //
 
 import XCTest
+@testable import kanaCommerceCore
 
 class AddItemCartUseCaseTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testAddItemUseCase_addOneItem_ShouldReceiveCartWithOneItem() {
+        
+        let sut = AddItemCartUseCase<CartItem>()
+        
+        let cart = sut.execute(CartItem.item1, toCart: Cart(items: [CartItem]()))
+        
+        XCTAssertEqual(cart.items.count, 1)
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testAddItemUseCase_addTwoEqualItems_ShouldReceiveCartWithOneItemWithQuantityTwo() {
+        
+        let sut = AddItemCartUseCase<CartItem>()
+        
+        var cart = sut.execute(CartItem.item1, toCart: Cart(items: [CartItem]()))
+        cart = sut.execute(CartItem.item1, toCart: cart)
+        
+        XCTAssertEqual(cart.items.count, 1)
+        XCTAssertEqual(cart.items.first?.quantity, 2)
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testAddItemUseCase_addTwoItems_ShouldReceiveCartWithTwoItems() {
+        
+        let sut = AddItemCartUseCase<CartItem>()
+        
+        var cart = sut.execute(CartItem.item1, toCart: Cart(items: [CartItem]()))
+        cart = sut.execute(CartItem.item2, toCart: cart)
+        
+        XCTAssertEqual(cart.items.count, 2)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+    
 }
